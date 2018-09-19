@@ -526,9 +526,6 @@ newhostname=$(sudo grep -m 1 '"ipv6"' /etc/cjdroute.conf | awk '{ print $2 }' | 
 sudo echo $newhostname | sudo tee /etc/hostname > /dev/null
 sudo sed -i -e "s/$oldhostname/$newhostname/" /etc/hosts
 
-echo -e "Your node's new hostname is $newhostname"
-
-read -p "Installation complete. Press any key to reboot your new node. " -n 1 -r
-
-# Reboot device
-sudo reboot
+echo "Your node's new hostname: $newhostname"
+echo "Installation complete."
+echo
