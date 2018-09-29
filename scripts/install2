@@ -4,6 +4,9 @@ set -e
 
 TAG_CJDNS=186169f9a8631633795e4e9d70c501519a7800f4
 
+# Set the name of the mesh network
+export MESH_NAME=infomesh
+
 # Get board information and set flags accordingly
 BOARD_FAMILY="Unknown"
 BOARD_NAME="Generic"
@@ -326,14 +329,6 @@ if [[ "$SUPPORT_WATCHDOG" == "true" ]] && [ -z "$WITH_WATCHDOG" -o "$WITH_WATCHD
         echo -e "\e[1;32mHardware Watchdog will be configured\e[0m"
         WITH_WATCHDOG=true
     fi
-fi
-
-# Prompt for name of the mesh network
-##TODO## This should be moved up to to mesh point question
-read -p "Enter the name of your mesh network (default: tomesh): " -r
-export MESH_NAME=`echo $REPLY | sed 's/ //g'`
-if [ "${#MESH_NAME}" == 0 ]; then
-    export MESH_NAME="tomesh"
 fi
 
 # Get tools
