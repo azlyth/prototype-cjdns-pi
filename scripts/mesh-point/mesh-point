@@ -7,8 +7,8 @@ set -e
 sudo iw reg set CA
 
 # Select physical device that supports 802.11s Mesh Point
-mesh_phy=phy0
-mesh_dev=$(iw dev | grep phy#0 -A 1 | grep Interface | awk '{print $2}')
+mesh_phy=phy1
+mesh_dev=$(iw dev | grep phy#1 -A 1 | grep Interface | awk '{print $2}')
 
 # Shut down the mesh_dev interface
 sudo ifconfig $mesh_dev down
