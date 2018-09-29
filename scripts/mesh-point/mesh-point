@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # NOTE: This is an Information-modified version of the original tomesh script
 
 set -e
