@@ -6,8 +6,7 @@ set -e
 sudo iw reg set CA
 
 # Select physical device that supports IBSS Ad-hoc
-#mesh_dev="wlan0"
-mesh_dev="wlan1"
+mesh_dev="wlan0"
 
 # Shut down the mesh_dev interface
 sudo ifconfig $mesh_dev down
