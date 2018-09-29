@@ -27,7 +27,7 @@ sudo ifconfig $mesh_dev up
 sudo ifconfig $mesh_dev 192.168.3.10
 
 # Join the mesh network with radio in HT40+ htmode to enable 802.11n rates
-sudo iw dev $mesh_dev mesh join MESH_NAME freq 2412
+sudo iw dev $mesh_dev mesh join MESH_NAME
 #sudo iw dev $mesh_dev mesh join MESH_NAME freq 2412 HT40+
 
 # Disable forwarding since we rely on cjdns to do routing and only uses Mesh Point as a point-to-point link
