@@ -5,7 +5,7 @@ set -e
 TAG_CJDNS=186169f9a8631633795e4e9d70c501519a7800f4
 
 # Set the name of the mesh network
-export MESH_NAME=infomesh
+export MESH_NAME=information
 
 # Get board information and set flags accordingly
 BOARD_FAMILY="Unknown"
